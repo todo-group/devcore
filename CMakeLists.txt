@@ -14,6 +14,6 @@ include(googletest)
 include(pybind11)
 include(standards)
 include(lattice)
+include(bcl)
 
 FetchContent_MakeAvailable(${FetchContents})
-
