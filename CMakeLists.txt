@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.14...3.22)
 include(cmake/prefix.cmake)
 project(devcore Fortran C CXX)
 include(cmake/postfix.cmake)
@@ -15,5 +15,7 @@ include(pybind11)
 include(standards)
 include(lattice)
 include(bcl)
+include(pyalea)
 
 FetchContent_MakeAvailable(${FetchContents})
+include_directories(${FetchContent_includes})
