@@ -4,6 +4,7 @@ project(devcore Fortran C CXX)
 include(cmake/postfix.cmake)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  include(catch2)
   include(eigen3)
   include(googletest)
   include(pybind11)
@@ -13,3 +14,5 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   include(pyalea)
   FetchContent_MakeAvailable(${FetchContents})
 endif()
+
+add_subdirectory(example)

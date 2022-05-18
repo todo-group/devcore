@@ -1,0 +1,6 @@
+set(PROGS factorial)
+foreach(name ${PROGS})
+  add_executable(${name} ${name}.cpp)
+  target_link_libraries(${name} PRIVATE Catch2::Catch2WithMain)
+  add_test(${name} ${name})
+endforeach(name)
