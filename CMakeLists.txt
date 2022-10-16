@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.14...3.22)
+cmake_minimum_required(VERSION 3.14)
 include(cmake/prefix.cmake)
 project(devcore Fortran C CXX)
 include(cmake/postfix.cmake)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  include(pythonvenv)
   include(catch2)
   include(eigen3)
   include(googletest)

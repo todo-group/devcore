@@ -6,7 +6,7 @@ if(NOT DEVCORE_PREFIX_CMAKE_INCLUDED)
 
   if(CONFIG)
     message(STATUS "Loading compiler configration: " ${CONFIG})
-    include(cmake/${CONFIG}.cmake)
+    include(cmake/config-${CONFIG}.cmake)
   else(CONFIG)
     if(NOT CMAKE_C_COMPILER)
       set(CMAKE_C_COMPILER "gcc" CACHE STRING "" FORCE)
