@@ -1,6 +1,6 @@
 find_package(Eigen3)
 if(Eigen3_FOUND)
-  include(${EIGEN3_USE_FILE})
+  message(STATUS "Found Eigen3: ${EIGEN3_INCLUDE_DIR}")
 else(Eigen3_FOUND)
   include(FetchContent)
   FetchContent_Declare(
